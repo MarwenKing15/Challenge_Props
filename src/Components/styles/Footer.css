@@ -1,0 +1,85 @@
+@import "https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300";
+
+#cont {
+  background-color: #212121 !important;
+  /* font-family: "Open Sans Condensed", sans-serif; */
+  color: #89907e;
+}
+
+:root {
+  --bg: #dcdde1;
+  --color-icon: #535c68;
+  --social-icon1: #e4405f;
+  --social-icon2: #3b5999;
+  --social-icon3: #e4405f;
+  --social-icon4: #cd201f;
+}
+
+.iconList {
+  width: 100%;
+  max-width: 50rem;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.iconItem {
+  list-style: none;
+}
+
+.iconLink {
+  display: inline-flex;
+  font-size: 3rem;
+  text-decoration: none;
+  color: var(--color-icon);
+  width: 6rem;
+  height: 6rem;
+  transition: 0.5s linear;
+  position: relative;
+  z-index: 1;
+  margin: auto;
+}
+
+.icon-link:hover {
+  color: #fff;
+}
+
+.iconLink i {
+  margin: auto;
+}
+
+.iconLink::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 4rem;
+  height: 4rem;
+  background: #000;
+  border-radius: 50%;
+  z-index: -1;
+  transform: scale(0);
+  transition: 0.3s cubic-bezier(0.95, 0.32, 0.37, 1.21);
+}
+
+.iconLink:hover::before {
+  transform: scale(0);
+}
+
+.iconItem:nth-child(1) a:hover:before {
+  background: var(--social-icon1);
+}
+
+.iconItem:nth-child(2) a:hover:before {
+  background: var(--social-icon2);
+}
+
+.iconItem:nth-child(3) a:hover:before {
+  background: var(--social-icon3);
+}
+
+.iconItem:nth-child(4) a:hover:before {
+  background: var(--social-icon4);
+}
